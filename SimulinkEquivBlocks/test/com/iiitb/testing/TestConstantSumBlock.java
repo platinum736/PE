@@ -54,7 +54,7 @@ public class TestConstantSumBlock {
 	@Test
 	public void test() {
 		Document doc = ParseXML
-				.initializeDocument("C:/Users/vsriganesh/Documents/MATLAB/test1_xml.xml");
+				.initializeDocument("C:/Users/rishabh-pc/Documents/GitHub/PE/SimulinkEquivBlocks/TestFiles/constantandsum.xml");
 		
 		
 		/* TEST : 1
@@ -329,6 +329,11 @@ public class TestConstantSumBlock {
 					Block block = test.testGenerateBlockStringNodeList(blockName,
 							attr);
 					
+					
+					/* The value of the corresponding constant blocks should be written
+					 *  in String.valueOf() for the test case to pass
+					 */
+					
 					if(blockName.contains("Constant1"))
 					{
 						assertEquals(block.getValue(), String.valueOf(8));
@@ -359,7 +364,7 @@ public class TestConstantSumBlock {
 		
 		assertEquals(blockList.size(),3);
 		
-		
+		/*
 		for (int nodeIter = 0; nodeIter < lineChildNodesOfSystemNodeList
 				.size(); nodeIter++) {
 
@@ -376,7 +381,7 @@ public class TestConstantSumBlock {
 			
 			
 
-		}
+		}*/
 		
 		
 		
